@@ -1,12 +1,13 @@
 #include <stdio.h>
-#include <stdbool.h>
+#include <stdint.h>
 
-bool i_clk;
-bool i_nrst;
-bool i_signal[3];
 
-bool o_ctl [3];
-bool o_signal;
+uint8_t i_clk;
+uint8_t i_nrst;
+uint8_t i_signal[3];
+
+uint8_t o_ctl [3];
+uint8_t o_signal;
 
 int main(int arc,char** argv){
 	

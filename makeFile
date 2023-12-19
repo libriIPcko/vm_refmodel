@@ -1,0 +1,3 @@
+# Makefile
+default:
+	gcc main.c -o vm
