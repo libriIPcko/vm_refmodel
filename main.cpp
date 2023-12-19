@@ -12,8 +12,8 @@ uint8_t o_signal;
 uint8_t ctl_mask[3];
 uint8_t l_err;
 uint8_t f_err;
-uint8_t l_erro_counter;
-uint8_t f_error_counter;
+uint8_t l_err_counter;
+uint8_t f_err_counter;
 uint8_t l_recovery_counter;
 uint8_t f_recovery_counter;
 
@@ -23,13 +23,39 @@ uint8_t f_recovery_counter;
 #define L_RECOVERY_CYCLES
 #define F_RECOVERY_CYCLES
 
+uint8_t get_l_err();
+uint8_t get_f_err();
+uint8_t get_l_err_counter();
+uint8_t get_f_err_counter();
+uint8_t get_l_recovery_counter();
+uint8_t get_f_recovery_counter();
+uint8_t gen_o_signal();
+uint8_t* evaluate_o_ctl();
 
-
-
-/*
-int main(int arc,char** argv){
-	
-	//o_signal = (!o_ctl[2] & i_signal[2]) | (!o_ctl[1] & i_signal[1]) | (!o_ctl[0] & i_signal[0]);
-	return 0;
+uint8_t get_l_err(){
+	return l_err;
 }
-*/
+uint8_t get_f_err(){
+	return f_err;
+}
+uint8_t get_l_err_counter(){
+	return l_err;
+}
+uint8_t get_f_err_counter(){
+	return f_err_counter;
+}
+uint8_t get_l_recovery_counter(){
+	return l_recovery_counter;
+}
+uint8_t get_f_recovery_counter(){
+	return f_err_counter;
+}
+
+uint8_t gen_o_signal(){
+	o_signal =  (!o_ctl[2] & i_signal[2]) | (!o_ctl[1] & i_signal[1]) | (!o_ctl[0] & i_signal[0]);
+}
+
+uint8_t* evaluate_o_ctl(){
+	
+	return  o_ctl;	//Return a pointer to the first element of the array
+}
