@@ -31,6 +31,7 @@ uint8_t get_l_recovery_counter();
 uint8_t get_f_recovery_counter();
 uint8_t gen_o_signal();
 uint8_t* evaluate_o_ctl();
+int calc(int a, int b);
 
 uint8_t get_l_err(){
 	return l_err;
@@ -58,4 +59,8 @@ uint8_t gen_o_signal(){
 uint8_t* evaluate_o_ctl(){
 	
 	return  o_ctl;	//Return a pointer to the first element of the array
+}
+
+int calc(int a, int b){
+	return a-b;
 }
