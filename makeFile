@@ -1,3 +1,2 @@
-
 default:
-	gcc -c main.c -o output_file.o
+	gcc -c refModel.c -o refModel.o
