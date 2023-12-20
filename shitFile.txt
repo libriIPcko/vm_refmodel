@@ -17,3 +17,95 @@ To https://github.com/libriIPcko/vm_refmodel.git
  * [new branch]      master -> master
 branch 'master' set up to track 'origin/master'.
 }
+
+```
+C:\Users\viktor.toth\Desktop\This\mycodes\akafuka>git init
+Initialized empty Git repository in C:/Users/viktor.toth/Desktop/This/mycodes/akafuka/.git/
+
+C:\Users\viktor.toth\Desktop\This\mycodes\akafuka>type null > .gitignore
+The system cannot find the file specified.
+
+C:\Users\viktor.toth\Desktop\This\mycodes\akafuka>git add akafuka.c
+
+C:\Users\viktor.toth\Desktop\This\mycodes\akafuka>git branch -M master
+
+C:\Users\viktor.toth\Desktop\This\mycodes\akafuka>git commit add .gitignore
+error: pathspec 'add' did not match any file(s) known to git
+error: pathspec '.gitignore' did not match any file(s) known to git
+
+C:\Users\viktor.toth\Desktop\This\mycodes\akafuka>git add .gitignore
+
+C:\Users\viktor.toth\Desktop\This\mycodes\akafuka>git commit --all -m "akafuka c1"
+[master (root-commit) bc8ee49] akafuka c1
+ 2 files changed, 6 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 akafuka.c
+
+C:\Users\viktor.toth\Desktop\This\mycodes\akafuka>git remote add origin https://github.com/vtoth2/akafuka.git
+
+C:\Users\viktor.toth\Desktop\This\mycodes\akafuka>git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 327 bytes | 327.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/vtoth2/akafuka.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+C:\Users\viktor.toth\Desktop\This\mycodes\akafuka>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+C:\Users\viktor.toth\Desktop\This\mycodes\akafuka>git branch -a
+* master
+  remotes/origin/master
+
+C:\Users\viktor.toth\Desktop\This\mycodes\akafuka>git checkout -b feature/akafuka2
+Switched to a new branch 'feature/akafuka2'
+
+C:\Users\viktor.toth\Desktop\This\mycodes\akafuka>git branch -a
+* feature/akafuka2
+  master
+  remotes/origin/master
+
+C:\Users\viktor.toth\Desktop\This\mycodes\akafuka>git commit akafuka.c -m "akafuka c2"
+[feature/akafuka2 8a1140b] akafuka c2
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+C:\Users\viktor.toth\Desktop\This\mycodes\akafuka>git push --set-upstream origin feature/akafuka2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 356 bytes | 356.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'feature/akafuka2' on GitHub by visiting:
+remote:      https://github.com/vtoth2/akafuka/pull/new/feature/akafuka2
+remote:
+To https://github.com/vtoth2/akafuka.git
+ * [new branch]      feature/akafuka2 -> feature/akafuka2
+branch 'feature/akafuka2' set up to track 'origin/feature/akafuka2'.
+
+C:\Users\viktor.toth\Desktop\This\mycodes\akafuka>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+C:\Users\viktor.toth\Desktop\This\mycodes\akafuka>git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 620 bytes | 77.00 KiB/s, done.
+From https://github.com/vtoth2/akafuka
+   bc8ee49..381fa62  master     -> origin/master
+Updating bc8ee49..381fa62
+Fast-forward
+ akafuka.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+C:\Users\viktor.toth\Desktop\This\mycodes\akafuka>
+```
